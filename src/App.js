@@ -5,7 +5,6 @@ import {CreateAccount} from './createaccount.js'
 import {Login} from './login.js'
 import {Deposit} from './deposit.js'
 import {Withdraw} from './withdraw.js'
-import {Balance} from './balance.js'
 import {AllData} from './alldata.js'
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {UserContext} from './context.js'
@@ -23,7 +22,6 @@ export function App() {
           <Route path="/login/" element={<Login/>} />
           <Route path="/deposit/" element={<Deposit/>} />
           <Route path="/withdraw/" element={<Withdraw/>} />
-          <Route path="/balance/" element={<Balance/>} />
           <Route path="/alldata/" element={<AllData/>} />
           </Routes>
         </div>

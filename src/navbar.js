@@ -22,9 +22,6 @@ function NavBar() {
             <LinkContainer to="/withdraw">
               <Nav.Link>Withdraw</Nav.Link>
           </LinkContainer>
-            <LinkContainer to="/balance">
-              <Nav.Link>Balance</Nav.Link>
-          </LinkContainer>
             <LinkContainer to="/allData">
               <Nav.Link>All Data</Nav.Link>
           </LinkContainer>
