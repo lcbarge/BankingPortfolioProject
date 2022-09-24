@@ -26,6 +26,15 @@ export function CreateAccount(){
             return false;
         }
       }
+      if (label === 'password'){
+        if (field.length <= 8){
+            setStatus('Password must contain at least 8 characters.');
+            setCardColor('danger')
+            setTimeout(() => setStatus(''),3000);
+            setTimeout(() => setCardColor('warning'),3000);
+            return false;
+        }
+      }
       return true;
   }
 

@@ -15,16 +15,16 @@ function NavBar() {
           <Nav className="me-auto">
             <LinkContainer to="/createAccount">
               <Nav.Link>Create Account</Nav.Link>
-          </LinkContainer>
+           </LinkContainer>
             <LinkContainer to="/deposit">
               <Nav.Link>Deposit</Nav.Link>
-          </LinkContainer>
+            </LinkContainer>
             <LinkContainer to="/withdraw">
               <Nav.Link>Withdraw</Nav.Link>
-          </LinkContainer>
+            </LinkContainer>
             <LinkContainer to="/allData">
               <Nav.Link>All Data</Nav.Link>
-          </LinkContainer>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Container>
