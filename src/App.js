@@ -9,11 +9,36 @@ import {AllData} from './alldata.js'
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {UserContext} from './context.js'
 export function App() {
+  const default_users = {
+      users:[{
+      name:'Lauren Barge',
+      email:'laurencbarge@gmail.com',
+      password:'secret',
+      balance:100
+    },{
+      name:'Maddie Mayer',
+      email:'maddie@mit.edu',
+      password:'secret1',
+      balance:240
+    },
+      {
+        name:'Thomas Richards',
+        email:'TK@unreachable.gov',
+        password:'secret2',
+        balance:500
+       },
+    {
+      name:'River Bend',
+      email:'rivere@google.com',
+      password:'secret3',
+      balance:40
+    }
+  ]}
   return (
     <div className="App">
     <Router>
       <NavBar/>
-      <UserContext.Provider value={{users:[{name:'abel',email:'abel@mit.edu',password:'secret',balance:100}]}}>
+      <UserContext.Provider value={default_users}>
         <div className="container bg-light" style={{padding: "20px"}}>
           <Routes>
           <Route path="/" exact element={<Home/>} />
@@ -32,3 +57,8 @@ export function App() {
 }
 
 export default App;
+
+
+
+
+

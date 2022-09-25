@@ -1,5 +1,5 @@
 import {ContextCard} from "./context";
-import {useContext, useState} from "react";
+import {useContext, useState, useEffect} from "react";
 import {UserContext} from './context.js'
 export function Deposit(){
   const [show, setShow]         = useState(true);
@@ -29,6 +29,16 @@ export function Deposit(){
             return false;
         }
       }
+      if (label === 'deposit'){
+       
+        if (field < 0){
+            setStatus('Error - negative amount');
+            setCardColor('danger')
+            setTimeout(() => setStatus(''),3000);
+            setTimeout(() => setCardColor('warning'),3000);
+            return false;
+        }
+      }
       return true;
   }
 
@@ -52,6 +62,7 @@ export function Deposit(){
     setCardColor('warning')
   }
 
+  let disabled = !(email&&deposit)
   return (
     <ContextCard
       bgcolor={cardColor}
@@ -75,14 +86,14 @@ export function Deposit(){
               <input type='email' 
               className="form-control" 
               id="email" 
-              placeholder="Re-enter your email" 
+              placeholder="enter your email" 
               value={email} 
               onChange={e => setEmail(e.currentTarget.value)} 
 
               />              
             <br/>
 
-              <button type="submit" className="btn btn-light" onClick={handleCreate}>Deposit</button>
+              <button type="submit" className="btn btn-light" disabled={disabled} onClick={handleCreate}>Deposit</button>
               </>
             ):(
               <>

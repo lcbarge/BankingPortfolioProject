@@ -1,5 +1,6 @@
 import {Container, Nav, Navbar} from "react-bootstrap";
 import Image from 'react-bootstrap/Image'
+// eslint-disable-next-line no-unused-vars
 import {Link} from "react-router-dom";
 import {LinkContainer} from 'react-router-bootstrap'
 
