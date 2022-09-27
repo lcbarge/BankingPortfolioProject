@@ -6,7 +6,7 @@ export function Home(){
       bgcolor="warning"
       txtcolor="black"
       header="LB Bank"
-      title="Welcome customer"
+      title="Welcome Customer"
       text="Thanks for banking with us. You can move around using the navigation bar."
       body={(<div className="hover-rotate">
         <img src="/bank.png" className="img-fluid" alt="Responsive image"/>

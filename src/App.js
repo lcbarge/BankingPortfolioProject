@@ -42,6 +42,7 @@ export function App() {
         <div className="container bg-light" style={{padding: "20px"}}>
           <Routes>
           <Route path="/" exact element={<Home/>} />
+          <Route path="/index.html" exact element={<Home/>} />
           <Route path="/home" element={<Home/>} />
           <Route path="/createAccount/" element={<CreateAccount/>} />
           <Route path="/login/" element={<Login/>} />

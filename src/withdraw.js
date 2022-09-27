@@ -52,8 +52,9 @@ export function Withdraw(){
   }
 
   function handleCreate(){
-    if (!validate(withdraw,     'withdraw'))     return;
     if (!validate(email,     'email'))     return;
+    if (!validate(withdraw,     'withdraw'))     return;
+    
     let my_user = ctx.users.find((user) => {
       return user.email === email
     })
